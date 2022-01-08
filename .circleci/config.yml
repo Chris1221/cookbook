@@ -10,6 +10,8 @@ jobs:
     executor: python/default
     steps:
       - checkout
+      - run:
+          command: pip install flask Frozen-Flask
       - run: 
           command: python cookbook/freeze.py
   deploy: 
