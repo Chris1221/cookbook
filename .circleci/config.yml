@@ -14,17 +14,11 @@ jobs:
           command: pip install flask Frozen-Flask pyyaml
       - run: 
           command: python cookbook/freeze.py
-  deploy: 
-    executor: gh-pages/default
-    steps:
-      - checkout
       - gh-pages/deploy:
           setup-git: true
           ssh-fingerprints: d9:9f:13:4a:ee:7f:18:a9:da:bd:29:21:bd:17:af:4f
-
-
+ 
 workflows:
   main:
     jobs:
       - build
-      - deploy
