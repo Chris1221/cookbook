@@ -1,0 +1,23 @@
+name: Sweet Mantou (馒头)
+description: Small, sweeter mantou.
+quantity: 8 mantou.
+categories: [chinese, pastry]
+ingredients:
+  "all-purpose flour": 200g
+  "sugar": 200g
+  "active dry yeast": 2 tsp
+  "baking powder": 1 tsp
+recipe:
+  - Mix 45 grams of (warm) water with 20 grams of sugar
+  - Mix 45 grams of (warm) water with 2 grams (1 tsp) of yeast
+  - Mix 200g of AP flour with 1 tsp of baking powder
+  - Add both of the water mixtures to the dough.
+  - Knead for ~8 minutes.
+  - Cover and let rest for 30 minutes.
+  - Flatten dough, and roll through the widest setting of a pasta maker ~8 times. (this is to remove air)
+  - Roll up to a ~25cm log.
+  - Flour, and cut into eighths (after snipping off the ends).
+  - Place each mantou on parchment paper and into a steamer.
+  - Proof for 15 minutes.
+  - Turn heat on, and once obviously steaming, steam for 5 minutes.
+  - Let sit for 5 minutes before taking them out.

@@ -1,0 +1,14 @@
+name: Shortbread cookies
+description: Too much butter but who cares?
+quantity: About a dozen cookies, depending on thickness. 
+categories: [baking, deserts]
+ingredients:
+  "butter": 142g
+  "salt": 1/2 tsp
+  "icing sugar": 1/2 cup
+  "vanilla extract": 1/2 tsp
+  "all-purpose flour": 180g cup
+recipe:
+  - Combine into dough
+  - Form into a rectangle and put in the fridge for ~ 30 minutes. 
+  - Bake at 350F for ~ 15 - 20 mins

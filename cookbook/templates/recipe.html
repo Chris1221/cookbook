@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<h1> {{ recipe.name }}</h1>
+
+<p> {{ recipe.description }}</p>
+
+<p>Tags: {% for tag in recipe.categories %} {{tag.capitalize()}}, {% endfor %}</p>
+
+<h2>Ingredients</h2>
+
+<ul>
+    {% for thing, amount in recipe.ingredients.items() %}
+        <li>{{thing.capitalize()}}: {{amount}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Recipe:</h2>
+
+<ol>
+    {% for step in recipe.recipe %}
+        <li>{{step}}</li>
+    {% endfor %}
+</ol>
+
+
+{% endblock %}
