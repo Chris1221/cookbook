@@ -1,0 +1,1 @@
+A cookbook built in `flask` and made static with `Frozen-Flask`. Automatically deployed to `gh-pages` through CircleCI. Recipes are written in a simple YAML markup in the `recipes/` directory following `recipes/template.yaml` and rendered through `jinja2` templates and Bootstrap 5.  
