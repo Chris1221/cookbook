@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+  gh-pages: sugarshin/gh-pages@1.0.0
+
+
+jobs:
+  build:
+    executor: python/default
+    steps:
+      - checkout
+      - run: 
+          command: python cookbook/freeze.py
+  deploy: 
+    executor: gh-pages/default
+    steps:
+      - gh-pages/deploy:
+          setup-git: true
+          ssh-fingerprints: <fingerprint>
+
+
+workflows:
+  main:
+    jobs:
+      - build
+      - deploy

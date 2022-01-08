@@ -27,7 +27,7 @@ def create_app(test_config=None):
     SECRET_KEY = os.urandom(32)
     app.config['SECRET_KEY'] = SECRET_KEY
     app.config["FREEZER_RELATIVE_URLS"] = True
-    app.config["FREEZER_DESTINATION"] = "../docs"
+    app.config["FREEZER_DESTINATION"] = "../dist"
     app.register_blueprint(cookbook)
     return app 
 
