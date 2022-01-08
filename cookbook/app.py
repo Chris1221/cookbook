@@ -18,7 +18,7 @@ def index():
 @cookbook.route('/recipe/<recipe_id>.html')
 def recipe(recipe_id):
     with open(f"recipes/{recipe_id}.yaml") as f:
-        recipe_data = yaml.load(f)
+        recipe_data = yaml.safe_load(f)
     
     return render_template('recipe.html', recipe=recipe_data)
 
