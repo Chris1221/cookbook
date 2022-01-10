@@ -2,15 +2,29 @@
 
 {% block title %}Home{% endblock %}
 
+{% block header %} Chris's Cookbook {% endblock %}
+
+{% block description %} This is my cook book! {% endblock %}
+
+
 {% block body %}
 
-This is a cookbook
+Since trying, and failing, to use many different applications to harmonize my growing collection of recipes, <a href="https://xkcd.com/927/">I 
+decided to write my own</a>. Here you can browse 
+<a href="/recipes.html">a list of all my recipes</a> or <a href="/tags.html">by tag</a>. The 
+recipes are printer friendly and easy to use on a mobile device. I've made the application in such a way
+that there is very little maintenance required, feel free to read the technical summary if you are interested. Thanks for stopping by.
 
-<h2>Recipes: </h2>
-{% for recipe in recipes %}
 
-    <p> <a href = {{ url_for('cookbook.recipe', recipe_id = recipe) }}> {{recipe.replace("_", " ").title()}}</a></p>
-{% endfor %}
- 
+<h4>Technical summary</h4>
+
+The application is fully written in flask, though I wanted to host it on a static server. 
+To accomplish this, I used a combination of Flask-Freeze and CirlceCI with gh-pages to both make the site static and
+automatically deploy to github pages whenever I push to the repository. Recipes are described through 
+an extremely simple YAML markup with flexible fields that can be omitted if desired. 
+Tags are rendered out seperately and are linked to the recipes they belong to.
+Other than that, I lifted some CSS from the al-folio 
+jekyll theme that I use for my main site. If curious, the website is open source on Github. 
+
 {% endblock %}
     

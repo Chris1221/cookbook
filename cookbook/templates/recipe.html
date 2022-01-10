@@ -2,19 +2,29 @@
 
 {% block title %}Home{% endblock %}
 
+
+{% block header %} {{ recipe.name }} {% endblock %}
+
+{% block description %} {{ recipe.description }} {% endblock %}
+
 {% block body %}
 
-<h1> {{ recipe.name }}</h1>
 
-<p> {{ recipe.description }}</p>
 
-<p>Tags: {% for tag in recipe.categories %} {{tag.capitalize()}}, {% endfor %}</p>
+
+  <i class="far fa-clock"></i> <strong>Time:</strong> {{ recipe.time }}  <br>
+
+  <i class="fas fa-utensils"></i> <strong>Quantity:</strong> {{ recipe.quantity }}
+
+<p><br> {% for tag in recipe.categories %} <a href= {{ url_for('cookbook.category', category = tag) }}> <button type="button" class="btn btn-light"> {{tag.capitalize()}} </button> </a>{% endfor %}</p>
+
+<hr>
 
 <h2>Ingredients</h2>
 
 <ul>
     {% for thing, amount in recipe.ingredients.items() %}
-        <li>{{thing.capitalize()}}: {{amount}}</li>
+        <li> <strong>{{amount}}</strong> {{thing.capitalize()}}</li>
     {% endfor %}
 </ul>
 

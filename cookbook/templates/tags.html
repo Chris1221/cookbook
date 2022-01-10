@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block header %} All tags{% endblock %}
+{% block description %} List of recipes by tag {% endblock %}
+
+
+{% block body %}
+
+
+{% for category, recipes in categories.items() %}
+
+<button type="button" class="btn btn-light"> {{category}} </button>
+
+<ul>
+{% for recipe in recipes %}
+    <li> <a href = {{ url_for('cookbook.recipe', recipe_id = recipe) }}> {{recipe.replace("_", " ").title()}}</a>
+{% endfor %}
+
+</ul>
+
+{% endfor %}
+
+{% endblock %}
