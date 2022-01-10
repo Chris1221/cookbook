@@ -50,8 +50,6 @@ def recipe(recipe_id):
     return render_template('recipe.html', recipe=recipe_data)
 
 @cookbook.route('/tags.html')
-
-
 def recipe_tags():
     recipes_in_category = {}
     for category in list_all_categories():
