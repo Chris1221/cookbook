@@ -59,8 +59,8 @@
             <div class="post">
 
                 <header class="post-header">
-                    <h1 class="post-title"><strong> Sweet Mantou (馒头) </strong></h1>
-                    <h5 class="post-description"> Small, sweeter mantou. Recipe from a Chinese Cooking Demystified video. Ning seems to be a fan.  </h5>
+                    <h1 class="post-title"><strong> <button type="button" class="btn btn-light"> baking </button></strong></h1>
+                    <h5 class="post-description">  </h5>
                 </header>
 
                 <article class="post-content">
@@ -71,63 +71,14 @@
                 <div class="container">
                     
 
-
-
-
-  <i class="far fa-clock"></i> <strong>Time:</strong> 4 hours  <br>
-
-  <i class="fas fa-utensils"></i> <strong>Quantity:</strong> 8 mantou.
-
-<p><br>  <a href= ../category/chinese> <button type="button" class="btn btn-light"> Chinese </button> </a> <a href= ../category/pastry> <button type="button" class="btn btn-light"> Pastry </button> </a></p>
-
-<hr>
-
-<h2>Ingredients</h2>
+List of recipes in this category:
 
 <ul>
-    
-        <li> <strong>200g</strong> All-purpose flour</li>
-    
-        <li> <strong>200g</strong> Sugar</li>
-    
-        <li> <strong>2 tsp</strong> Active dry yeast</li>
-    
-        <li> <strong>1 tsp</strong> Baking powder</li>
-    
+
+    <li> <a href = ../recipe/shortbread_cookies.html> Shortbread Cookies</a>
+
+
 </ul>
-
-<h2>Recipe:</h2>
-
-<ol>
-    
-        <li>Mix 45 grams of (warm) water with 20 grams of sugar</li>
-    
-        <li>Mix 45 grams of (warm) water with 2 grams (1 tsp) of yeast</li>
-    
-        <li>Mix 200g of AP flour with 1 tsp of baking powder</li>
-    
-        <li>Add both of the water mixtures to the dough.</li>
-    
-        <li>Knead for ~8 minutes.</li>
-    
-        <li>Cover and let rest for 30 minutes.</li>
-    
-        <li>Flatten dough, and roll through the widest setting of a pasta maker ~8 times. (this is to remove air)</li>
-    
-        <li>Roll up to a ~25cm log.</li>
-    
-        <li>Flour, and cut into eighths (after snipping off the ends).</li>
-    
-        <li>Place each mantou on parchment paper and into a steamer.</li>
-    
-        <li>Proof for 15 minutes.</li>
-    
-        <li>Turn heat on, and once obviously steaming, steam for 5 minutes.</li>
-    
-        <li>Let sit for 5 minutes before taking them out.</li>
-    
-</ol>
-
 
 
                 </div>

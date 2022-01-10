@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    -->
+
+    <script src="https://kit.fontawesome.com/f90ed4d0c9.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-
-
-    <link rel= "stylesheet" type= "text/css" href= "static/css/project.css">
+    <link rel="stylesheet" type="text/css" href="static/css/project.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
     
     
@@ -20,28 +23,95 @@
     <title>Home</title>
 </head>
 
-<body> 
-   
+<body>
 
-    <div class="container">
-        
+    <header class="site-header">
 
-This is a cookbook
+        <div class="wrapper">
 
-<h2>Recipes: </h2>
+            <nav class="site-nav">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                <label for="nav-trigger">
+                    <span class="menu-icon">
+                        <svg viewBox="0 0 18 15" width="18px" height="15px">
+                            <path fill="#424242"
+                                d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z" />
+                            <path fill="#424242"
+                                d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z" />
+                            <path fill="#424242"
+                                d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z" />
+                        </svg>
+                    </span>
+                </label>
+
+                <div class="trigger">
+                    <a class="page-link" href="/">home</a>
+                    <a class="page-link" href="/recipes.html">recipes</a>
+                    <a class="page-link" href="/tags.html">tags</a>
+                    <a class="page-link" href="https://github.com/Chris1221/cookbook/new/main/recipes">add recipe</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="post">
+
+                <header class="post-header">
+                    <h1 class="post-title"><strong> Chris's Cookbook </strong></h1>
+                    <h5 class="post-description"> This is my cook book!  </h5>
+                </header>
+
+                <article class="post-content">
 
 
-    <p> <a href = recipe/shortbread_cookies.html> Shortbread Cookies</a></p>
 
 
-    <p> <a href = recipe/sweet_mantou.html> Sweet Mantou</a></p>
+                <div class="container">
+                    
 
- 
+Since trying, and failing, to use many different applications to harmonize my growing collection of recipes, <a href="https://xkcd.com/927/">I 
+decided to write my own</a>. Here you can browse 
+<a href="/recipes.html">a list of all my recipes</a> or <a href="/tags.html">by tag</a>. The 
+recipes are printer friendly and easy to use on a mobile device. I've made the application in such a way
+that there is very little maintenance required, feel free to read the technical summary if you are interested. Thanks for stopping by.
 
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<h4>Technical summary</h4>
+
+The application is fully written in flask, though I wanted to host it on a static server. 
+To accomplish this, I used a combination of Flask-Freeze and CirlceCI with gh-pages to both make the site static and
+automatically deploy to github pages whenever I push to the repository. Recipes are described through 
+an extremely simple YAML markup with flexible fields that can be omitted if desired. 
+Tags are rendered out seperately and are linked to the recipes they belong to.
+Other than that, I lifted some CSS from the al-folio 
+jekyll theme that I use for my main site. If curious, the website is open source on Github. 
+
+
+                </div>
+
+                </article>
+
+
+
+                <footer>
+                <div class="wrapper">
+                    &copy; Copyright 2022 Christopher Cole. <a href="https://github.com/chris1221/cookbook">View source on Github.</a>
+
+
+                </div>
+                </footer>
+
+
+
+
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+                    crossorigin="anonymous"></script>
+                <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 
 </body>
