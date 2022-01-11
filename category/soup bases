@@ -1,5 +1,3 @@
-
- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +14,8 @@
     <script src="https://kit.fontawesome.com/f90ed4d0c9.js" crossorigin="anonymous"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="static/css/project.css">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/project.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
     
     
@@ -61,8 +59,8 @@
             <div class="post">
 
                 <header class="post-header">
-                    <h1 class="post-title"><strong> List of All Recipes </strong></h1>
-                    <h5 class="post-description"> Every single recipe  </h5>
+                    <h1 class="post-title"><strong> <button type="button" class="btn btn-light"> soup bases </button></strong></h1>
+                    <h5 class="post-description">  </h5>
                 </header>
 
                 <article class="post-content">
@@ -73,16 +71,14 @@
                 <div class="container">
                     
 
+List of recipes in this category:
+
+<ul>
+
+    <li> <a href = ../recipe/red_braised_pork_belly.html> Red Braised Pork Belly</a>
 
 
-    <p> <a href = recipe/red_braised_pork_belly.html> Red Braised Pork Belly</a></p>
-
-
-    <p> <a href = recipe/shortbread_cookies.html> Shortbread Cookies</a></p>
-
-
-    <p> <a href = recipe/sweet_mantou.html> Sweet Mantou</a></p>
-
+</ul>
 
 
                 </div>
