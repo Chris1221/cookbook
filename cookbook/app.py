@@ -37,7 +37,7 @@ def recipe_homepage():
     return render_template('recipes.html', recipes=list_recipes())
 
 
-@cookbook.route('/category/<category>')
+@cookbook.route('/category/<category>.html')
 def category(category):
     return render_template('category.html', category=category, recipes=[a for a in list_all_in_category(category)])
 
