@@ -45,9 +45,9 @@
                 </label>
 
                 <div class="trigger">
-                    <a class="page-link" href="/">home</a>
-                    <a class="page-link" href="/recipes.html">recipes</a>
-                    <a class="page-link" href="/tags.html">tags</a>
+                    <a class="page-link" href="{{ url_for('cookbook.index') }}">home</a>
+                    <a class="page-link" href="{{ url_for('cookbook.recipe_homepage') }}">recipes</a>
+                    <a class="page-link" href="{{ url_for('cookbook.recipe_tags') }}">tags</a>
                     <a class="page-link" href="https://github.com/Chris1221/cookbook/new/main/recipes">add recipe</a>
                 </div>
             </nav>
