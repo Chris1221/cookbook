@@ -1,6 +1,6 @@
 name: Fried Chicken Sandwich
 description: Incredibly easy fried chicken sandwhich, easily doable for lunch on a work day. 
-times: 20 minutes
+time: 20 minutes
 quantity: One or two sandwiches
 categories: [lunch, easy]
 ingredients:
