@@ -1,0 +1,21 @@
+name: Beef stew
+description: What is it
+times: 3 hours
+quantity: How many does it make?
+categories: [dinner]
+ingredients:
+  "ingredient": amount
+recipe:
+  - Cook bacon in oil until crispy, remove
+  - Brown beef in batches
+  - Afterwards, cook onions in the same pan
+  - Deglaze with 2 tablespoons of bourbon (scotch?)
+  - Add carrot, garlic, potatoes, salt, pepper, and fry for 5 minutes on medium. 
+  - add a cup of red wine
+  - add crushed tomatoes
+  - 1L of beef broth and bay leaves, tablespoon of thyme 
+  - 275 for two hours 
+  - zest a lemon into the broth, then the juice.
+  
+notes:
+  - probably add some worchester sauce at some point. 
