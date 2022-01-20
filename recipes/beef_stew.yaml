@@ -1,6 +1,6 @@
 name: Beef stew
 description: Simple beef stew, get it started at lunch and ready by dinner. 
-times: 3 hours
+time: 3 hours
 quantity: A lot of stew
 categories: [dinner, long]
 ingredients:
