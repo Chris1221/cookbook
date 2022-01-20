@@ -1,6 +1,6 @@
 name: What is it called?
 description: What is it
-times: How long it takes
+time: How long it takes
 quantity: How many does it make?
 categories: [tag1, tag2]
 ingredients:
