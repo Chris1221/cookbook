@@ -1,21 +1,36 @@
 name: Beef stew
-description: What is it
+description: Simple beef stew, get it started at lunch and ready by dinner. 
 times: 3 hours
-quantity: How many does it make?
-categories: [dinner]
+quantity: A lot of stew
+categories: [dinner, long]
 ingredients:
-  "ingredient": amount
+  "bacon": A few slices
+  "beef": 2lbs
+  "onion": Two medium 
+  "scotch or bourbon": 1tbsp
+  "carrot": two large
+  "potatoes": 1lb
+  "garlic": 6 cloves
+  "red wine": 1 cup
+  "broth": 1L
+  "crushed tomatoes": 1 can
+  "bay leaves": 3
+  "thyme": 1 tbsp
+  "worchestershire sauce": 1 tbsp
+  "mushrooms": 1/2lb
+  "lemon": 1
 recipe:
-  - Cook bacon in oil until crispy, remove
-  - Brown beef in batches
-  - Afterwards, cook onions in the same pan
-  - Deglaze with 2 tablespoons of bourbon (scotch?)
+  - Cook bacon in oil until crispy, remove and reserve. 
+  - Season beef with salt and papper then brown in the bacon oil in batches if necessary
+  - Remove beef from pan and brown the onion in the flavoured oil. 
+  - Deglaze with a small amount of scotch. Not too much. 
   - Add carrot, garlic, potatoes, salt, pepper, and fry for 5 minutes on medium. 
-  - add a cup of red wine
-  - add crushed tomatoes
-  - 1L of beef broth and bay leaves, tablespoon of thyme 
-  - 275 for two hours 
-  - zest a lemon into the broth, then the juice.
-  
+  - Add a cup of red wine and allow to come to a boil to burn off some alcohol. 
+  - Add crushed tomatoes (or ketchup if none), 1L of beef broth, bay leaves, thyme, worchestershire sauce 
+  - Bring to a simmer, cover, and bake at 275F for two hours. 
+  - Uncover and bake at 350F for 30 minutes to brown the top and boil off a little more alcohol. 
+  - Zest the lemon into the broth and add salt, pepper, and lemon juice to taste. 
 notes:
   - probably add some worchester sauce at some point. 
+  - A relatively fatty cut of beef works best as the fat will geletanize and keep it juicy. 
+  - It is easy to bake this too long, in which case the potatoes will turn to mush. Its not the worst thing in the world, but annoying. 
