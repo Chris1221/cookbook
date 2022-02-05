@@ -1,0 +1,17 @@
+name: Sourdough boule 
+description: Small loaf of sourdough bread 
+time: 1.5 days
+quantity: 1 small loaf 
+categories: [baking]
+ingredients:
+  "all-purpose flour": 388g
+  "water": 257g
+  "sourdough starter": 98g
+  "salt": 8g 
+recipe:
+  - Dissolve the starter in the water and add salt. Add flour to hydrate and let stand for 10-15 minutes.
+  - Fold once after 10-15 minutes, and again after 30 minutes (45 minutes after starting).
+  - Bulk fermentation should take something like 8 hours. 
+  - Shape into a boule and let proof in baneton overnight.
+  - Take out of the fridge ~ an hour before baking and preheat the oven.
+  - Bake for 25 minutes in dutch oven and 15-20 minutes with the lid off. 
