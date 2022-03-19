@@ -1,4 +1,3 @@
-
 name: Quick Fried Venison
 description: Thinly sliced venison or lamb quickly fried with green onions and a simple sauce. 
 time: 10 minutes
@@ -6,7 +5,7 @@ quantity: Enough for two with Lao bing or rice
 categories: [dinner, fast, chinese]
 ingredients:
   "meat": 1/2 lb
-  "ginger: Tbsp
+  "ginger": Tbsp
   "green onions": 2
   "chilis": Handful 
 recipe:
