@@ -26,5 +26,19 @@ Tags are rendered out seperately and are linked to the recipes they belong to.
 Other than that, I lifted some CSS from the al-folio 
 jekyll theme that I use for my main site. If curious, the website is open source on Github. 
 
+
+<h4>Changes</h4>
+<ul>
+    {% for change in changes %}
+        {% if change.new %}
+            <li>{{ change.date }} <b>Recipe added: </b> <a href="https://chrisbcole.me/cookbook/recipe/{{change.name}}.html">{{change.name_nice}} </a></li>
+        {% else %}
+
+            <li>{{ change.date }} Recipe updated: <a href="https://chrisbcole.me/cookbook/recipe/{{change.name}}.html">{{change.name_nice}} </a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
 {% endblock %}
     

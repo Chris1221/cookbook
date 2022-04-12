@@ -3,6 +3,9 @@ import json
 import os
 import yaml
 import glob
+from pathlib import Path
+
+import git
 
 # Just some convenience methods
 def list_recipes():
@@ -25,12 +28,45 @@ def list_all_categories():
 
     return categories
 
+def list_changes(ncommit = 5):
+    """List all recent changes in files to generate
+    a changelog on the fly.
+
+    Returns:
+        List[str]: Messages to display as recipe changes. 
+    """
+
+    repo = git.Repo(search_parent_directories=True)
+    commits = repo.iter_commits('main', max_count=ncommit)
+    
+    messages = []
+    prev_commit = "Head"
+    for commit in commits:
+        for diff in commit.diff(prev_commit):
+            if diff.a_path.startswith("recipes/"):
+                name = Path(diff.a_path).stem
+                if name != "template":
+                    name_nice = " ".join(name.split("_"))
+                    date = commit.committed_datetime.strftime("%b %d, %Y")
+
+                    change = {}
+                    change["date"] = date
+                    change["name_nice"] = name_nice
+                    change["name"] = name
+                    change["new"] = diff.new_file
+
+                    messages.append(change)
+                break
+        prev_commit = commit 
+    return messages
+
+
 # Create the blueprint
 cookbook = Blueprint('cookbook', __name__, template_folder='templates')
 
 @cookbook.route('/')
 def index():
-    return render_template('index.html', recipes=list_recipes())
+    return render_template('index.html', recipes=list_recipes(), changes = list_changes(10))
 
 @cookbook.route('/recipes.html')
 def recipe_homepage():
