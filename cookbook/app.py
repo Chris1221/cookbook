@@ -40,7 +40,7 @@ def list_changes(ncommit = 5):
     commits = repo.iter_commits('main', max_count=ncommit)
     
     messages = []
-    prev_commit = "Head"
+    prev_commit = "HEAD"
     for commit in commits:
         for diff in commit.diff(prev_commit):
             if diff.a_path.startswith("recipes/"):
