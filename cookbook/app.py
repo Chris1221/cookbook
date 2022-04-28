@@ -41,21 +41,24 @@ def list_changes(ncommit = 5):
     
     messages = []
     prev_commit = "HEAD"
+    prev_date = ""
     for commit in commits:
+        if prev_date == "":
+            prev_date = commit.committed_datetime.strftime("%b %d, %Y")
+        
         for diff in commit.diff(prev_commit):
             if diff.a_path.startswith("recipes/"):
                 name = Path(diff.a_path).stem
                 if name != "template":
                     name_nice = " ".join(name.split("_"))
-                    date = commit.committed_datetime.strftime("%b %d, %Y")
 
                     change = {}
-                    change["date"] = date
+                    change["date"] = prev_date
                     change["name_nice"] = name_nice
                     change["name"] = name
                     change["new"] = diff.new_file
-
                     messages.append(change)
+                    prev_date = commit.committed_datetime.strftime("%b %d, %Y")
                 break
         prev_commit = commit 
     return messages
