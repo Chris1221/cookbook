@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block header %} {{ trip.title }} {% endblock %}
+
+{% block description %} {{ trip.description }} {% endblock %} 
+
+{% block body %}
+  <i class="fa fa-calendar"></i> <strong>Date:</strong> {{ trip.date }}  ({{trip.length}})<br>
+
+  <i class="fa fa-globe"></i> <strong>Location:</strong> {{ trip.location }} 
+  
+  {% if "camping" in trip.tags %}
+    <br>
+    <i class="fa fa-tents"></i> <strong>Sites:</strong> {{ ", ".join(trip.sites) }}
+  {% endif %}
+  <br>
+
+<p><br> {% for tag in trip.tags %} <a href=#> <button type="button" class="btn btn-light"> {{tag.capitalize()}} </button> </a>{% endfor %}</p>
+
+
+<hr>
+
+<h3>Trip journal</h3>
+
+{{ trip.md|safe }}
+
+{% endblock %}

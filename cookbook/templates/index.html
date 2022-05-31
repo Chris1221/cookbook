@@ -2,18 +2,21 @@
 
 {% block title %}Home{% endblock %}
 
-{% block header %} Chris's Cookbook {% endblock %}
+{% block header %} Chris's Personal Page {% endblock %}
 
-{% block description %} This is my cook book! {% endblock %}
+{% block description %} This started as a cookbook, I wonder what it will become? {% endblock %}
 
 
 {% block body %}
 
-Since trying, and failing, to use many different applications to harmonize my growing collection of recipes, <a href="https://xkcd.com/927/">I 
-decided to write my own</a>. Here you can browse 
-<a href="recipes.html">a list of all my recipes</a> or <a href= "{{ url_for('cookbook.recipe_tags') }}">by tag</a>. The 
-recipes are printer friendly and easy to use on a mobile device. I've made the application in such a way
-that there is very little maintenance required, feel free to read the technical summary if you are interested. Thanks for stopping by.
+
+
+Since trying, and failing, to use many different applications to harmonize my growing collection of "things", <a href="https://xkcd.com/927/">I 
+decided to write my own</a>. This website is about halfway between an incoherant free-form note and a structured database of things that are interesting to me. 
+Here you can browse 
+<a href="recipes.html">a list of all my recipes</a> and <a href= "{{ url_for('cookbook.all_trips') }}">a collection of trip logs</a> from my camping adventures. The intention
+is to take the extremely simple template format that I've adopted here (more details below) and keep track of things that I want to remember. The changelog below is automatically
+updated, just in case you ever find yourself here again. Thanks for stopping by.
 
 
 <h4>Technical summary</h4>
@@ -30,11 +33,11 @@ jekyll theme that I use for my main site. If curious, the website is open source
 <h4>Changes</h4>
 <ul>
     {% for change in changes %}
-        {% if change.new %}
-            <li>{{ change.date }} <b>Recipe added: </b> <a href="https://chrisbcole.me/cookbook/recipe/{{change.name}}.html">{{change.name_nice}} </a></li>
-        {% else %}
 
-            <li>{{ change.date }} Recipe updated: <a href="https://chrisbcole.me/cookbook/recipe/{{change.name}}.html">{{change.name_nice}} </a></li>
+        {% if change.new %}
+            <li>{{ change.date }} <b>{{change.type}} added: </b> <a href="https://chrisbcole.me/cookbook/{{change.type}}/{{change.name}}.html">{{change.name_nice}} </a></li>
+        {% else %}
+            <li>{{ change.date }} {{change.type.capitalize()}} updated: <a href="https://chrisbcole.me/cookbook/{{change.type}}/{{change.name}}.html">{{change.name_nice}} </a></li>
         {% endif %}
     {% endfor %}
 </ul>

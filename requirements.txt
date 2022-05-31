@@ -1,3 +1,4 @@
 flask
 Frozen-Flask
 gitpython
+markdown

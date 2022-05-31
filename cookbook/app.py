@@ -5,6 +5,9 @@ import yaml
 import glob
 from pathlib import Path
 
+from cookbook.parser import MDParser
+
+
 import git
 
 # Just some convenience methods
@@ -57,6 +60,21 @@ def list_changes(ncommit = 5):
                     change["name_nice"] = name_nice
                     change["name"] = name
                     change["new"] = diff.new_file
+                    change["type"] = "recipe"
+                    messages.append(change)
+                    prev_date = commit.committed_datetime.strftime("%b %d, %Y")
+                break
+            elif diff.a_path.startswith("trips/"):
+                name = Path(diff.a_path).stem
+                if name != "template":
+                    name_nice = " ".join(name.split("_"))
+
+                    change = {}
+                    change["date"] = prev_date
+                    change["name_nice"] = name_nice
+                    change["name"] = name
+                    change["new"] = diff.new_file
+                    change["type"] = "trip"
                     messages.append(change)
                     prev_date = commit.committed_datetime.strftime("%b %d, %Y")
                 break
@@ -95,6 +113,24 @@ def recipe_tags():
         recipes_in_category[category] = [a for a in list_all_in_category(category)]
     
     return render_template('tags.html', categories=recipes_in_category)
+
+
+@cookbook.route('/trip/<trip_id>.html')
+def trip(trip_id):
+    trip = MDParser(f"trips/{trip_id}.md") 
+    return render_template('trips/trip.html', trip=trip)
+
+@cookbook.route('/trips.html')
+def all_trips():
+    trips = []
+    for trip in glob.glob('trips/*.md'):
+        if trip != 'trips/template.md':
+            trips.append(MDParser(trip))
+
+    # Sort by date
+    trips.sort(key=lambda x: x.yaml["date"], reverse=True)
+
+    return render_template('trips/all_trips.html', trips=trips)
 
 
 def create_app(test_config=None):

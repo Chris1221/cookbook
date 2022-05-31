@@ -1,0 +1,30 @@
+
+ {% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %} List of Trip Reports {% endblock %}
+
+{% block description %} All trips by date. {% endblock %}
+
+
+{% block body %}
+
+{% for trip in trips %}
+
+<p>{{trip.date}}: <a href = {{ url_for('cookbook.trip', trip_id = trip.id) }}>{{trip.title}}</a> ({{trip.location}}) [{{", ".join(trip.tags)}}]</p>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block sidebar %}
+
+{% for trip in trips %}
+
+<p>{{trip.date}}</p>
+
+{% endfor %}
+
+
+{% endblock %}

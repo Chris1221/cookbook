@@ -6,7 +6,7 @@
 
 {% block header %} List of All Recipes {% endblock %}
 
-{% block description %} Every single recipe {% endblock %}
+{% block description %} <p> You can also <a href = {{ url_for('cookbook.recipe_tags') }}>browse by tag</a> instead. </p> {% endblock %}
 
 
 {% block body %}
