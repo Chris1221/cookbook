@@ -363,6 +363,18 @@ footer a:hover { color: #002147; }
 
 .center { text-align: center; }
 
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .post-header { margin-bottom: 40px; }
 
 .post-list { margin: 0; padding: 0; list-style: none; }
