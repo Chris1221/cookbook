@@ -16,7 +16,9 @@ jobs:
       - run:
           command: git pull
       - run:
-          command: pip install flask Frozen-Flask pyyaml gitpython
+          command: pip install flask Frozen-Flask pyyaml gitpython markdown
+      - run:
+          command: pip install -e .
       - run: 
           command: python cookbook/freeze.py
       - gh-pages/deploy:
