@@ -24,7 +24,7 @@ class MDParser():
         yaml_str = md[yaml_start + 3:yaml_end]
         md = md[yaml_end + 3:]
 
-        self.yaml = yaml.load(yaml_str.strip())
+        self.yaml = yaml.safe_load(yaml_str.strip())
         
         # This just makes it easier to access the yaml data
         # from the template
