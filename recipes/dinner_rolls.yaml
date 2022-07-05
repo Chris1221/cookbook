@@ -1,0 +1,22 @@
+name: Dinner Rolls
+description: From Preppy Kitchen
+time: Half hour active, 4 hours not active
+quantity: 16 rolls
+categories: [dinner, baking]
+ingredients:
+  milk: 1 cup
+  yeast: 1 tsbp
+  AP flour: 390g 
+  sugar: 3 tbsp  
+  butter: 71g
+  egg: 1 large
+  salt: 1 tsp
+recipe:
+  - Dissolve yeast into cup of 110F milk with half the sugar and let stand for 10 minutes
+  - Combine flour, melted butter, remainder of sugar, 1 eggs, and half the flour
+  - Add salt to remaining flour and combine with the remainder of the dough
+  - Mix with stand-mixer for 5 minutes, the dough should be tacky but smooth.
+  - Hand knead for a few minutes until it passes the window pane test. 
+  - Bulk ferment for 2 hours, then shape into 16 balls.
+  - Proof for an hour and bake at 350F for 20 minutes. 
+  - Brush with melted butter. 
